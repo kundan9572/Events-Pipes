@@ -13,6 +13,7 @@ export class PipesComponent implements OnInit {
   dblClickCounter: number = 0;
   name: string = '';
   number: number= 0;
+  currentDate: number;
 
   ngOnInit(): void {
   }
@@ -44,4 +45,7 @@ export class PipesComponent implements OnInit {
     this.number = currency; 
   }
 
+  date():void{
+    this.currentDate= Date.now();
+  }
 }

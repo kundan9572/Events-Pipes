@@ -51,8 +51,20 @@
             {{number | currency: 'EUR'}}
         </p>
     </div>
-    
+    <div class="event">
+        <h3>Pipe-Dates</h3>
+         <button class="field" (click) = date()>Submit</button>
+        <p class="field">
+            {{currentDate | date: 'fullDate'}}
+            <br>
+            {{currentDate | date: 'medium'}}
+            <br>
+            {{currentDate | date: 'short'}}
+            <br>
+            {{currentDate | date: 'MM'}}
+            <br>
+            {{currentDate | date: 'date'}}
+        </p>
 
-
-
+    </div>
 </div>
