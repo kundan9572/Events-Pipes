@@ -1,0 +1,58 @@
+<header>Dom Events</header>
+
+<div class="container">
+    <div class="event">
+        <h3>Click Events</h3>
+        <button (click) = click() class="field" >Click Me</button>
+        <p>{{ clickCounter }}</p>
+    </div>
+    <div class="event">
+        <h3> Double Click Events</h3>
+        <button (click) = dblclick() class="field" >Double Click Me</button>
+        <p>{{ dblClickCounter }}</p>
+    </div>
+    <div class="event">
+        <h3>Blur Events</h3>
+        <input type="text"  (blur) = blur() class="field">
+    </div>
+    <div class="event">
+        <h3>Focus Events</h3>
+        <input type="text"  (focus) = focus() class="field">
+    </div>
+    <div class="event">
+        <h3>Scroll Events</h3>
+        <textarea (scroll) = (scroll) name="scrool" i cols="70" rows="6"> “The beautiful thing about life is, that we will never reach an age where there is nothing left to learn, see or be; it's magical really.”
+            I AM MERELY A VISITOR HERE. THIS PLANET, THESE PEOPLE, AND THE CIRCUMSTANCES THAT SURROUND MY EXISTENCE ARE MEANT TO HELP TEACH ME UNDERSTANDING, COMPASSION, EMPATHY AND LOVE.
+            THE MOST IMPORTANT QUESTION I NEED TO FACE IS, “HOW CAN I MAKE LIFE MORE WONDERFUL FOR MYSELF AND OTHERS?”
+            MOST PEOPLE FAIL AT THE EXAM OF LIFE BECAUSE THEY’RE TRYING TO COPY OTHERS, NOT REALIZING THAT EVERYONE HAS A DIFFERENT QUESTION TO ANSWER.
+            MY LIFE WILL BEGIN TO TAKE THE SHAPE I SINCERELY WISH WHEN I GIVE AS MUCH ENERGY TO MY DREAMS AS I DO TO MY FEARS.
+            I UNDERSTAND THAT IF I CAN SHOW JUST A MOMENT OF PATIENCE IN A MOMENT OF ANGER, I WILL SAVE MYSELF 100 MOMENTS OF REGRET.
+        </textarea>
+    </div>
+    <div class="event">
+        <h3>Pipe-uppercase & Lowercase</h3>
+        <input type="text" #names (ngModel)="name">
+        <button class="field" (click) = pipes(names.value)>Submit</button>
+        <p class="field">
+            {{name | uppercase}}
+            <br>
+            {{name | lowercase}}
+        </p>
+    </div>
+    <div class="event">
+        <h3>Pipe-Currency</h3>
+        <input type="text" #currency (ngModel)="number">
+        <button class="field" (click) = numbers(currency.value)>Submit</button>
+        <p class="field">
+            {{number | currency: 'INR'}}
+            <br>
+            {{number | currency: 'USD'}}
+            <br>
+            {{number | currency: 'EUR'}}
+        </p>
+    </div>
+    
+
+
+
+</div>
